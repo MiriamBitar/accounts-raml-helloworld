@@ -6,7 +6,9 @@ pipeline {
   stages {
     stage('Build Application') { 
       steps {
-        sh 'mvn clean install'
+        container ('maven'){
+                  sh 'mvn version'
+                }
       }  
     }
  	stage('Test') { 
