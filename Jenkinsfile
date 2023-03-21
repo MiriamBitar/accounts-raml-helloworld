@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build Application') { 
       steps {
-        sh 'sudo apt autoremove'
+        sh 'sudo apt -y autoremove'
         sh 'sudo apt install ca-certificates'
         sh 'sudo apt update && apt install -y maven'
         sh 'mvn clean install'
