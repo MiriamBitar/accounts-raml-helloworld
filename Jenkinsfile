@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build Application') { 
       steps {
-        sh 'sudo apt install ca-certificates'
+        sh 'sudo apt-get install ca-certificates'
         sh 'sudo apt-get update && apt-get install -y maven'
         sh 'mvn clean install'
       }  
