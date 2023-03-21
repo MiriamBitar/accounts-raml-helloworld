@@ -8,7 +8,7 @@ pipeline {
       steps {
 
 
-        sh 'sudo apt update && apt install -y maven'
+        sh 'apt update && apt install -y maven'
         sh 'mvn clean install'
       }  
     }
