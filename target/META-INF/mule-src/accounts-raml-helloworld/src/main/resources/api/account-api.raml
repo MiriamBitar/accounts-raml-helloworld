@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: Account-api
+version: 1.0
+
+/accounts: 
+ displayName: Accounts
+ get:
+   description: Get a list of all accounts 
+   responses:
+     200:
+       body:
+         application/json:
+           example:
+             [
+               {"accountID": "AC123","name": "The first account"},
+               {"accountID": "AC456","name": "The second account"}
+             ]
+
