@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    agent {label 'master'}
-  }
+  agent {label 'master'}
   triggers{
     pollSCM('H/2 * * * *')
   }
