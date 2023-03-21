@@ -8,7 +8,6 @@ pipeline {
       steps {
 
 
-        sh 'apt update && apt install -y maven'
         sh 'mvn clean install'
       }  
     }
