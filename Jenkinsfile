@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    node 'master'
+  }
   triggers{
     pollSCM('H/2 * * * *')
   }
