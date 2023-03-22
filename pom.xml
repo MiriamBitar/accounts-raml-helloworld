@@ -12,14 +12,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<app.runtime>4.4.0-20220824</app.runtime>
+		<app.runtime>4.4.0</app.runtime>
 		<maven-deploy-plugin.version>3.0.0</maven-deploy-plugin.version>
 		<mule.maven.plugin.version>3.4.0</mule.maven.plugin.version>
+		<munit.version>2.7.9</munit.version>
 	</properties>
 
 	<build>
 		<plugins>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
@@ -32,7 +33,7 @@
 				</configuration>
 				<version>3.0.1</version>
 			</plugin>
-			<!-- <plugin>
+			 <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
 				<version>2.5.2</version>
@@ -51,15 +52,15 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
-						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>${mule.version}</muleVersion>
 						<username>${username}</username>
 						<password>${password}</password>
 						<applicationName>${project.artifactId}</applicationName>
 						<environment>Sandbox</environment>
-						<workerType>${workerType}</workerType>
+						<workerType>Micro</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
-						<!-- 	<region> ${region} </region> -->
+						<region>${region}</region> 
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
