@@ -50,8 +50,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
 						<muleVersion>${mule.version}</muleVersion>
-						<!--<username>${username}</username>
-						<password>${password}</password>-->
+						<username>${username}</username>
+						<password>${password}</password>
 						<applicationName>AccountDeployment</applicationName>
 						<server>AnypointSandbox</server>
 						<environment>Sandbox</environment>
