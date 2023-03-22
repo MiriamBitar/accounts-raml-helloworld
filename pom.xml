@@ -28,9 +28,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-				</configuration>
 				<version>3.0.1</version>
 			</plugin>
 			 <plugin>
@@ -53,9 +50,10 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
 						<muleVersion>${mule.version}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
-						<applicationName>${project.artifactId}</applicationName>
+						<!--<username>${username}</username>
+						<password>${password}</password>-->
+						<applicationName>AccountDeployment</applicationName>
+						<server>AnypointSandbox</server>
 						<environment>Sandbox</environment>
 						<workerType>Micro</workerType>
 						<workers>1</workers>
