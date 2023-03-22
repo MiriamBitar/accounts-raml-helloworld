@@ -8,7 +8,6 @@ pipeline {
       steps {
         //sh 'mvn clean install'
         sh 'mvn clean package'
-        sh 'mvn --encrypt-master-password  Usmc1775!'
 
       }  
     }
