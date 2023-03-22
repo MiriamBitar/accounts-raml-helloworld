@@ -6,9 +6,8 @@ pipeline {
   stages {
     stage('Build Application') { 
       steps {
-
-
-        sh 'mvn clean install'
+        //sh 'mvn clean install'
+        sh 'mvn clean package'
         sh 'mvn --encrypt-master-password  Usmc1775!'
 
       }  
@@ -29,7 +28,7 @@ pipeline {
       steps {
         echo 'Deploying only because of code commit...'
         echo 'Deploying to  dev environent....'
-       sh 'mvn package deploy -DmuleDeploy -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_PSW} -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
+       sh 'mvn deploy -DmuleDeploy -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_PSW} -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
       // sh 'mvn clean package deploy -DmuleDeploy -Dmule.verbose.exception=true -DmuleDeploy.prop.skipMaven=true -Denv=cloudhub -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_PSW} -DworkerType=Micro -Dworkers=1 -Dregion=us-west-2'
 
       }
